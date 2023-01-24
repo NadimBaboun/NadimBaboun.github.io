@@ -2,34 +2,8 @@
 <html>
   <head>
     <title>YouTube Video Downloader</title>
-    <style>
-      /* Add some styling for the UI */
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        margin: 20px;
-      }
-      #video-url {
-        width: 80%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        box-sizing: border-box;
-      }
-      #download-btn {
-        background-color: #4CAF50;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        cursor: pointer;
-      }
-      #download-btn:hover {
-        background-color: #3e8e41;
-      }
-      #download-status {
-        color: green;
-        font-size: 20px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
   </head>
   <body>
     <h1>YouTube Video Downloader</h1>
@@ -40,22 +14,5 @@
       <button id="download-btn" onclick="downloadVideo()">Download</button>
     </form>
     <p id="download-status"></p>
-
-    <script>
-      function downloadVideo() {
-        // Get the video URL from the input field
-        var videoUrl = document.getElementById("video-url").value;
-
-        // Use the pytube library to download the video
-        var pytube = require("pytube");
-        var yt = pytube(videoUrl);
-        var stream = yt.streams.filter(file_extension='mp4',resolution='720p').first()
-        stream.download("C:\Users\thebe\Downloads");
-
-        // Update the UI to show that the video has been downloaded
-        document.getElementById("download-status").innerHTML = "Downloaded";
-        document.getElementById("download-status").style.color = "green";
-      }
-    </script>
   </body>
 </html>
