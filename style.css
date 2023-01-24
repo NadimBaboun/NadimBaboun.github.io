@@ -1,0 +1,25 @@
+ body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 20px;
+      }
+      #video-url {
+        width: 80%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+      #download-btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        cursor: pointer;
+      }
+      #download-btn:hover {
+        background-color: #3e8e41;
+      }
+      #download-status {
+        color: green;
+        font-size: 20px;
+      }
